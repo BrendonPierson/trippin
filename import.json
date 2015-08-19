@@ -1,0 +1,16 @@
+{
+  "trips": [
+    {
+      "location": "Nashville",
+      "location_type": "city",
+      "visited": false,
+      "reviews": [
+        {
+          "date": "now",
+          "text": "loved it",
+          "title": "My first trip to Nashville"
+        }
+      ]
+    }
+  ]
+}
