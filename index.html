@@ -7,33 +7,60 @@
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body>
-	<div id="list-of-trips">
-	</div>
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1>Trippin!</h1>
+    <p>A place to remember trips you've been on and store a wishlist of future trips.</p>
+    <button id="openAddTripForm" class="btn btn-primary btn-lg"  type="button">Add a Trip</a></p>
+  </div>
+</div>
 
-  <form>
-      <div class="form-group">
-        <label for="location">Location</label>
-        <input name ="location" id="location" type="text" class="form-control" placeholder="Guam" aria-describedby="basic-addon1">
+  <div id="addTripForm" class="container-fluid">
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <form>
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input name ="location" id="location" type="text" class="form-control" placeholder="Guam">
+          </div>
+          <div class="form-group">
+            <label for="locationType">Location Type</label>
+            <select id="locationType" name="locationType" class="form-control">
+              <option>Country</option>
+              <option>City</option>
+              <option>Town</option>
+            </select>
+          </div>
+          <!-- <div class="input-group">
+            <span class="input-group-addon">Review</span>
+            <input id="reviewTitle" type="text" class="form-control" placeholder="Review Title">
+            <input id="reviewDate" type="text" class="form-control" placeholder="date">
+          </div>
+          <textarea id="review" name="review" class="form-control" rows="3" placeholder="Write a short review of your trip."></textarea> -->
+          <div class="btn-group" role="group" aria-label="...">
+            <button id="visited" type="button" class="btn btn-default">Visited</button>
+            <button id="wish-list" type="button" class="btn btn-default">Wish List</button>
+          </div>
+          <div class="form-group">
+            <button id="addLocation" type="button" class="btn btn-primary">Add Location</button>
+          </div>
+        </form>
       </div>
-      <div class="form-group">
-      <label for="locationType">Location Type</label>
-        <select id="locationType" name="locationType" class="form-control">
-          <option>Country</option>
-          <option>City</option>
-          <option>Town</option>
-        </select>
-      </div>
-      <label for="review">Review</label>
-      <textarea id="review" name="review" class="form-control" rows="3" placeholder=""></textarea>
-      <div class="btn-group" role="group" aria-label="...">
-        <button id="visited" type="button" class="btn btn-default">Visited</button>
-        <button id="wish-list" type="button" class="btn btn-default">Wish List</button>
-      </div>
-      <div class="form-group">
-        <button id="addLocation" type="button" class="btn btn-primary">Add Location</button>
-      </div>
-    </form>
+    </div>
+  </div>
 
+  <div id="list-of-trips">
+  </div>
+
+  <div class="form-group review-entry">
+    <div class="input-group">
+      <span class="input-group-addon">Review</span>
+      <input id="reviewTitleUpdate" type="text" class="form-control" placeholder="Review Title">
+      <input id="reviewDateUpdate" type="text" class="form-control" placeholder="date">
+    </div>
+    <textarea id="reviewUpdate" name="review" class="form-control" rows="3" placeholder="Write a short review of your trip."></textarea>
+    <button id="save-review" type="button" class="btn btn-primary">Save Review</button>
+  </div>
 
   <script data-main="javascripts/main" 
   				src="lib/bower_components/requirejs/require.js"></script>

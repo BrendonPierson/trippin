@@ -17,8 +17,8 @@ requirejs.config({
 });
 
 //dependencies are global dependencies
-requirejs(["dependencies", "load-data", "save-data"], 
-  function(dependencies, loadData, saveData){
+requirejs(["dependencies", "load-data", "save-data", "reviews"], 
+  function(dependencies, loadData, saveData, reviews){
 
   } //end require function
 );//end require 
