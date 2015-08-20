@@ -22,7 +22,12 @@
           {{/each}}
         </ol>
       {{/if}}
+      {{#if visited}}
       <button id="add-review#{{@key}}" type="button" class="btn btn-primary btn-sm">Add Review</button>
+      {{/if}}
+      {{#unless visited}}
+        <button id="nowVisited#{{@key}}" type="button" class="btn btn-primary btn-sm">Now Visited!</button>
+      {{/unless}}
     </div>
   </div>
 {{/each}}

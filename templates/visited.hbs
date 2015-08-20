@@ -23,8 +23,9 @@
           {{/each}}
         </ol>
       {{/if}}
+      {{#if visited}}
       <button id="add-review#{{@key}}" type="button" class="btn btn-primary btn-sm">Add Review</button>
-    </div>
+      {{/if}}    </div>
   </div>
 {{/if}}
 {{/each}}
