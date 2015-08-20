@@ -1,7 +1,33 @@
+body {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6e/On_the_plane_to_Lisbon_(5580623458).jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 #addTripForm {
   display: none;
+  background: rgba(255,255,255, 0.7); 
+  margin: 0 0 5% 0;
 }
 
 .review-entry {
   display: none;
+}
+
+.jumbotron {
+  background: rgba(255,255,255, 0.5);
+}
+.trip-div {
+  border-radius: 10px;
+  text-align: center;
+  ol {
+    text-align: left;
+  }
+}
+
+.thumbnail {
+ background: rgba(255,255,255, 0.5); 
+ &:hover {
+  background: rgba(255,255,255, 0.9); 
+ }
 }

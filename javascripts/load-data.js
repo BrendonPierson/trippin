@@ -1,6 +1,7 @@
 define(function(require){
   var firebase = require('firebase'),
       templates = require('get-templates'),
+      filter = require('filter'),
       ref = new Firebase("https://trippin-nss-app.firebaseio.com/");
 
   // Listen for change on location types node
@@ -21,6 +22,10 @@ define(function(require){
 
     // Insert the DOM string into the appropriate element
     $("#list-of-trips").html(populatedTemplate);
+
+
+    //init the filter listeners
+    filter(trips);
 
 
   });

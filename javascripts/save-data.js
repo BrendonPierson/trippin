@@ -3,7 +3,7 @@ define(function(require){
   var visited = false;
 
   $("#openAddTripForm").click(function(){
-    $("#addTripForm").slideDown('slow');
+    $("#addTripForm").slideToggle('slow');
   });
 
   $("#visited").click(function(){
@@ -14,7 +14,9 @@ define(function(require){
     visited = false;
   });
 
-
+  $(".close").click(function(){
+    $("#addTripForm").slideToggle('slow');
+  });
 
 
   $("#addLocation").click(function(){  

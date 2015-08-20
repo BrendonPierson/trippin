@@ -1,5 +1,6 @@
 {{#each this}}
-  <div class="col-xs-6 col-md-4 trip-div">
+{{#unless visited}}
+    <div class="col-xs-6 col-md-4 trip-div">
     <div class="thumbnail">
       <h3>{{location}}</h3>
       <p>{{location_type}}</P>
@@ -25,18 +26,5 @@
       <button id="add-review#{{@key}}" type="button" class="btn btn-primary btn-sm">Add Review</button>
     </div>
   </div>
+{{/unless}}
 {{/each}}
-
-{{!-- 
-<div class="row">
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="..." alt="...">
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-      </div>
-    </div>
-  </div>
-</div> --}}
