@@ -1,5 +1,6 @@
 define(function(require){
   var firebase = require("firebase"),
+      $ = require("jquery"),
       selectedTripId;
 
    $(document).on('click', "button[id^='nowVisited#']", function(){

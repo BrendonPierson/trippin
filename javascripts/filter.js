@@ -1,11 +1,10 @@
 define(function(require){
   var $ = require("jquery"),
       template = require("get-templates");
-      // firebase = require("firebase"),
-      // ref = new Firebase('https://trippin-nss-app.firebaseio.com/trips')
-
 
 return function(trips){
+  //click event handlers for filter buttons
+  //filters by switching the hbs template
   $("#visitedFilter").click(function(){
     console.log("visited filter");
     $("#list-of-trips").html(template.visitedTpl(trips));
